@@ -14,7 +14,9 @@ class BarangController extends Controller
      */
     public function index()
     {
-        //
+        $barang = DB::table('barangs')->get();
+
+        return view('index', ['barang' => $barang]);
     }
 
     /**
